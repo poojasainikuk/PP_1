@@ -16,4 +16,4 @@ def select_friend():
         return user_input - 1
     else:
         print " invalid choice.Try again."
-    exit(-1)
+        exit(-1)

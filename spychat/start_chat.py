@@ -2,6 +2,7 @@
 #from globals import current_status_message
 from add_friend import add_friend
 from add_status import add_status
+from select_friend import select_friend
 
 #start chat funtion defination.
 def start_chat(name, age, rating, status):

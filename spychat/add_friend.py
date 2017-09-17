@@ -1,29 +1,33 @@
 #import statements
-from globals import friends_name, friends_age, friends_rating, friends_is_online
+from globals import friends
 
 #add new friend.
 def add_friend() :
-    new_name = raw_input("please add your friend's name: ")
-    new_salutation = raw_input("are they Mr. or Ms.? ")
+    new_friend = {
+        'name' : '',
+        'salutation' : '',
+        'age' : 0,
+        'rating' : 0.0,
+        'is_online' : False
+    }
+
+    new['name'] = raw_input("please add your friend's name: ")
+    new['salutation'] = raw_input("are they Mr. or Ms.? ")
     #concatenation
-    new_name =new_name + " " + new_salutation
+    new_friend['name'] = new_friend['salutation'] + " " +  new_friend['name']
 
-    new_age = int(raw_input("Age? "))
+    new_friend['age'] = int(raw_input("Age? "))
 
-    new_rating = float(raw_input("Spy rating? "))
+    new_friend['rating'] = float(raw_input("Spy rating? "))
 
 
     #user input validations
-    if len(new_name) > 0 and new_age >12 and new_age < 50:
-        friends_name.append(new_name)
-        friends_age.append(new_age)
-        friends_rating.append(new_rating)
-        friends_is_online.append(True)
-
-
-
+    if len(new_friend['name']) > 0 and new_friend['age'] >12 and new_friend['age'] < 50:
+        new_friend['is_online'] = True
+        friends.append(new_friend)
+        print 'Friend added!'
     else:
         print 'Sorry,invalid entery'
 
         #returing total no. of friends
-    return len(friends_name)
+    return len(friends)
