@@ -26,10 +26,27 @@ elif (existing.upper == "N") :
         spy['salutation'] = raw_input('what should we call you ? :')
         spy['age'] = int(raw_input("Enter your age?")) #typecasting
 
+        while True:
+            try:
+                #typecasting
+                spy['age'] = int(raw_input("enter your age? "))
+                break
+            except ValueError:
+                print "Invalid age.try again"
+
         #concatenation of salutation and name
         spy['name'] = spy['salutation'] + " " + spy['name']
 
         spy['rating'] = float(raw_input(" What is your spy rating?" ))#typecasting
+
+        while True:
+            try:
+                # typecasting
+                spy['rating'] = float(raw_input("enter your rating? "))
+                break
+            except ValueError:
+                print "Invalid rating.try again"
+
         spy['is_online'] = True
 
         #starting chat application
